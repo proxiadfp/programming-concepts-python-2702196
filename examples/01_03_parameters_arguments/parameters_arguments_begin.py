@@ -8,9 +8,9 @@ def mix_and_cook():
     print('Flipping it!')
     print('Cooking the other side\n')
 
-def make_omelette():
+def make_omelette(ingredient):
     mix_and_cook()
-    omelette = 'a tasty omelette'
+    omelette = f'a {ingredient} omelette'
     return omelette
 
 def make_pancake():
@@ -19,7 +19,7 @@ def make_pancake():
     return pancake
 
 # make breakfast for two
-barron_breakfast = make_omelette()
-olivia_breakfast = make_omelette()
+barron_breakfast = make_omelette('bacon')
+olivia_breakfast = make_omelette('spam')
 print(f'Barron is having {barron_breakfast}\n')
 print(f'Olivia is having {olivia_breakfast}\n')

@@ -26,3 +26,7 @@ class Car(Vehicle):
 class Motorcycle(Vehicle):
     def helmet(self):  # put on a helmet
         print('Helmet on - nice and safe!')
+
+class ElectricCar(Car):
+    def drive(self):
+        print(f'The {self.color} {self.manufacturer} goes ssshhh...')
