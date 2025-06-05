@@ -21,3 +21,16 @@ def cause_error(error_type):
         raise ElectricalError('circuit breaker', 'overloaded')
     elif error_type == 'plumbing':
         raise PlumbingError('dishwasher', 'spraying water')
+    else :
+        raise Exception('a generic household problem')
+
+try:
+    cause_error('x')
+except ElectricalError as e:
+    print(e)
+    print('Barron fix it')
+except PlumbingError as e:
+    print(e)
+    print('Call the plumber')
+except:
+    print ('Call the landlord')

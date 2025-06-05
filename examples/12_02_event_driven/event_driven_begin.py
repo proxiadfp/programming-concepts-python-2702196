@@ -1,6 +1,7 @@
 """ A Brief Study in Handling Life Events """
 
 import asyncio
+import time
 
 def alarm():  # handler for when the alarm goes off
     print('Wake Up!')
@@ -9,16 +10,19 @@ def alarm():  # handler for when the alarm goes off
 
 def doorbell():  # handler for when the doorbell rings
     print('Ding! Dong!')
+    #time.sleep(3)
     print('Opening the door... "Thanks for bringing the pizza!"\n')
+    
 
 def phonecall():  # handler for when the phone rings
     print('Ring Ring!')
     print('Answering the phone... "Hello! Who is this?"\n')
+    loop.stop()
 
 loop = asyncio.get_event_loop()
 loop.call_later(1, alarm)      # schedule initial alarm event
 loop.call_later(4, doorbell)   # schedule doorbell event
-loop.call_later(5, phonecall)  # schedule phone call event
+loop.call_later(4, phonecall)  # schedule phone call event
 
 print('Starting the event loop...\n')
 loop.run_forever()  # run until stop() is called

@@ -1,4 +1,5 @@
 """ Polling for Pizza to Cure My Hunger """
+import time
 
 hungry = True  # I need a pizza!
 
@@ -14,3 +15,5 @@ while (hungry):
 
     print('Closing the front door.\n')
     front_door.close()
+
+    time.sleep(1)
